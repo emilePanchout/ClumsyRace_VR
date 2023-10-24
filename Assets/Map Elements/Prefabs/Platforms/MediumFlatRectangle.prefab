@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 3197980115092959609}
   - component: {fileID: 5640041178807151866}
   - component: {fileID: 4984956950326564106}
-  - component: {fileID: -2287416401788442708}
   m_Layer: 0
   m_Name: MediumFlatRectangle
   m_TagString: Untagged
@@ -106,17 +105,3 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &-2287416401788442708
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6950736859815827011}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e283c6813dc63a445a530faea02068bb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  models:
-  - {fileID: 5640041178807151866}
