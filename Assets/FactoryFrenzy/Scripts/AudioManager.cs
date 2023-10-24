@@ -10,8 +10,19 @@ public class AudioManager : MonoBehaviour
 
     // Assurez-vous d'attacher un composant AudioSource à l'objet contenant ce script
 
-    private void Awake()
+    //private void Awake()
+    //{
+    //    audioSource = GetComponent<AudioSource>();
+
+    //    if (audioSource == null)
+    //    {
+    //        Debug.LogError("AudioSource non trouvé. Veuillez attacher un AudioSource à l'objet contenant ce script.");
+    //    }
+    //}
+    void Start()
     {
+        Debug.LogError("Audio manager");
+
         audioSource = GetComponent<AudioSource>();
 
         if (audioSource == null)
@@ -22,8 +33,12 @@ public class AudioManager : MonoBehaviour
 
     public void PlayDeletionSound()
     {
+        Debug.LogError("PlayDeletionSound");
+
         if (deletionSound != null && audioSource != null)
         {
+            Debug.LogError("deletionSound");
+
             audioSource.PlayOneShot(deletionSound);
         }
         else
