@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 4700809746532074003}
   - component: {fileID: 7556307663062423053}
   - component: {fileID: 8282451347954865225}
-  - component: {fileID: 3497700914560886713}
   m_Layer: 0
   m_Name: SmallLongHill
   m_TagString: Untagged
@@ -106,17 +105,3 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &3497700914560886713
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5432213274411387179}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e283c6813dc63a445a530faea02068bb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  models:
-  - {fileID: 7556307663062423053}

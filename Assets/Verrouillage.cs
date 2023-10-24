@@ -23,20 +23,24 @@ public class Verrouillage : MonoBehaviour
 
 
 
-    private void onVerouillage()
-    {
+    //private void onVerouillage()
+    //{
 
-        RaycastHit hit;
+    //    RaycastHit hit;
 
-        if (Physics.Raycast(transform.position, transform.forward, out hit))
-        {
-            GameObject objetPointe = hit.collider.gameObject;
+    //    if (Physics.Raycast(transform.position, transform.forward, out hit))
+    //    {
+    //        GameObject objetPointe = hit.collider.gameObject;
 
-            objetPointe.transform.rotation = Quaternion.identity;
+    //        objetPointe.transform.rotation = Quaternion.identity;
 
-            objetPointe.transform.position = new Vector3(0, 0, 0);
-            objetPointe.transform.localScale = new Vector3(1, 1, 1);
+    //        objetPointe.transform.position = new Vector3(0, 0, 0);
+    //        objetPointe.transform.localScale = new Vector3(1, 1, 1);
 
-        }
-    }
+    //    }
+    //}
+
+
+
+
 }
