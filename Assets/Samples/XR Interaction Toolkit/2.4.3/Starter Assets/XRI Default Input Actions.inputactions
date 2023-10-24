@@ -1417,6 +1417,24 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true
+                },
+                {
+                    "name": "Delete",
+                    "type": "Button",
+                    "id": "48b19fbf-e65e-40f7-9fb8-f7292a7c3f74",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "verrouillage",
+                    "type": "Button",
+                    "id": "a9036e24-2625-4b90-878a-0d8d74fb3025",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -1560,6 +1578,28 @@
                     "processors": "",
                     "groups": "Generic XR Controller",
                     "action": "UI Scroll",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "ade88429-d803-425d-acda-60f31758e55a",
+                    "path": "<XRController>{RightHand}/triggerPressed",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Delete",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "8230fab2-0ef6-4d04-98af-da619c832149",
+                    "path": "<XRController>{RightHand}/primary2DAxisClick",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "verrouillage",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

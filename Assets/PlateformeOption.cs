@@ -10,15 +10,17 @@ public class PlateformeOption : MonoBehaviour
 {
     public TMPro.TMP_Dropdown dropdownplateforme;
     public TMPro.TMP_Dropdown dropdownpiege;
+  
 
     public Transform hand;
     public Transform piegeposition;
     public GameObject parent;
 
     public GameObject[] prefabsplatforme;
+  
     public GameObject[] prefabspiège;
     // public Transform hand;
-
+    
     // public GameObject[] prefabs;
     void Start()
 
@@ -26,16 +28,19 @@ public class PlateformeOption : MonoBehaviour
         List<string> optionsplateforme = new List<string>();
         foreach (GameObject prefab in prefabsplatforme)
         {
-            optionsplateforme.Add(prefab.name); // ajouter
+            optionsplateforme.Add(prefab.name); // ajouter les  prefab plateforms
         }
         dropdownplateforme.AddOptions(optionsplateforme);
 
         List<string> optionspieges = new List<string>();
         foreach (GameObject i in prefabspiège)
         {
-            optionspieges.Add(i.name); // ajouter
+            optionspieges.Add(i.name); // ajouter  les prefab checkpoints
         }
-        dropdownpiege.AddOptions(optionspieges); ;
+        dropdownpiege.AddOptions(optionspieges);
+
+
+       
 
 
     }
@@ -65,4 +70,8 @@ public class PlateformeOption : MonoBehaviour
         GameObject selectedPrefab = prefabspiège[index];
         Instantiate(selectedPrefab, piegeposition.position, piegeposition.rotation, parent.transform);
     }
+
+    
+
+
 }
