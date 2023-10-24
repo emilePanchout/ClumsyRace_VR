@@ -17,9 +17,9 @@ public class PlateformeOption : MonoBehaviour
 
     public GameObject[] prefabsplatforme;
     public GameObject[] prefabspiège;
+
     // public Transform hand;
 
-    // public GameObject[] prefabs;
     void Start()
 
     {
