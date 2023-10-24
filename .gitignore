@@ -1,6 +1,26 @@
+### CESI ###########################################################################
+### CESI ###########################################################################
+### CESI ###########################################################################
+
+# CESI VHD: Release folder when the application is built.
+/[Rr]elease/
+
+# CESI VHD: All folder or subfolder finishing with "NoCommit" are not submitted to git
+# for example ModelsNoCommit/ allows to test with 3D model in the application without commiting them.
+# once validated, those files can be moved inside the "Models/" folder to be used.
+*NoCommit/
+
+####################################################################################
+####################################################################################
+####################################################################################
+
+### UNITY.gitignore 09-2021 ###########################################################################
+### UNITY.gitignore 09-2021 ###########################################################################
+### UNITY.gitignore 09-2021 ###########################################################################
+
 # This .gitignore file should be placed at the root of your Unity project directory
 #
-# Get latest from https://github.com/github/gitignore/blob/main/Unity.gitignore
+# Get latest from https://github.com/github/gitignore/blob/master/Unity.gitignore
 #
 /[Ll]ibrary/
 /[Tt]emp/
@@ -14,8 +34,8 @@
 # They also could contain extremely sensitive data
 /[Mm]emoryCaptures/
 
-# Recordings can get excessive in size
-/[Rr]ecordings/
+# Asset meta data should only be ignored when the corresponding asset is also ignored
+!/[Aa]ssets/**/*.meta
 
 # Uncomment this line if you wish to ignore the asset store tools plugin
 # /[Aa]ssets/AssetStoreTools*
@@ -59,7 +79,6 @@ sysinfo.txt
 *.apk
 *.aab
 *.unitypackage
-*.app
 
 # Crashlytics generated file
 crashlytics-build.properties
@@ -70,3 +89,9 @@ crashlytics-build.properties
 # Temporary auto-generated Android Assets
 /[Aa]ssets/[Ss]treamingAssets/aa.meta
 /[Aa]ssets/[Ss]treamingAssets/aa/*
+
+
+####################################################################################
+####################################################################################
+####################################################################################
+
