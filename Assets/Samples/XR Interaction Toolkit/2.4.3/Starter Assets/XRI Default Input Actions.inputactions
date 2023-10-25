@@ -1575,7 +1575,7 @@
                 {
                     "name": "",
                     "id": "8230fab2-0ef6-4d04-98af-da619c832149",
-                    "path": "<XRController>{RightHand}/primary2DAxisClick",
+                    "path": "<Keyboard>/#(B)",
                     "interactions": "",
                     "processors": "",
                     "groups": "",

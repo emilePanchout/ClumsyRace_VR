@@ -1,7 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Burst.Intrinsics;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.XR.Interaction.Toolkit;
 
 public class Verrouillage : MonoBehaviour
 {
@@ -17,28 +19,33 @@ public class Verrouillage : MonoBehaviour
     void Update()
     {
 
+        if (deleteRef.action.triggered)
+        {
+            Debug.Log("verrouiller");
+            onVerouillage();
+           
 
-        
+        }
     }
 
 
+    private void onVerouillage()
+    {
 
-    //private void onVerouillage()
-    //{
+        RaycastHit hit;
 
-    //    RaycastHit hit;
+        if (Physics.Raycast(transform.position, transform.forward, out hit))
+            
+        {
+                  GameObject objetPointe = hit.collider.gameObject;
+          
+              XRGrabInteractable interactable = objetPointe.GetComponent<XRGrabInteractable>();
 
-    //    if (Physics.Raycast(transform.position, transform.forward, out hit))
-    //    {
-    //        GameObject objetPointe = hit.collider.gameObject;
+            interactable.enabled = false;
 
-    //        objetPointe.transform.rotation = Quaternion.identity;
-
-    //        objetPointe.transform.position = new Vector3(0, 0, 0);
-    //        objetPointe.transform.localScale = new Vector3(1, 1, 1);
-
-    //    }
-    //}
+        }
+    }
+    
 
 
 
