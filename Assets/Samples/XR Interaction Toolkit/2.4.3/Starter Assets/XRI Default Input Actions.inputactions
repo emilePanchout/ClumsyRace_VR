@@ -1415,6 +1415,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "Deverouillgae",
+                    "type": "Button",
+                    "id": "01f9ca49-295d-4794-aa78-282a2405e935",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -1575,11 +1584,22 @@
                 {
                     "name": "",
                     "id": "8230fab2-0ef6-4d04-98af-da619c832149",
-                    "path": "<Keyboard>/#(B)",
+                    "path": "<XRController>{RightHand}/menu",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
                     "action": "verrouillage",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "9c9dbfc9-4363-45c1-830e-dfad46769a29",
+                    "path": "<Keyboard>/#(B)",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Deverouillgae",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
