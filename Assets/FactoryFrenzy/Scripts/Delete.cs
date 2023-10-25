@@ -39,7 +39,7 @@ public class Delete : MonoBehaviour
                 if (audioManager != null)
                 {
                     audioManager.PlayDeletionSound();
-                    Debug.LogError("tpp");
+                    Debug.Log("tpp");
 
                 }
 
