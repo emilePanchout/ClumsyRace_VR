@@ -21,29 +21,29 @@ public class AudioManager : MonoBehaviour
     //}
     void Start()
     {
-        Debug.LogError("Audio manager");
+        Debug.Log("Audio manager");
 
         audioSource = GetComponent<AudioSource>();
 
         if (audioSource == null)
         {
-            Debug.LogError("AudioSource non trouvé. Veuillez attacher un AudioSource à l'objet contenant ce script.");
+            Debug.Log("AudioSource non trouvé. Veuillez attacher un AudioSource à l'objet contenant ce script.");
         }
     }
 
     public void PlayDeletionSound()
     {
-        Debug.LogError("PlayDeletionSound");
+        Debug.Log("PlayDeletionSound");
 
         if (deletionSound != null && audioSource != null)
         {
-            Debug.LogError("deletionSound");
+            Debug.Log("deletionSound");
 
             audioSource.PlayOneShot(deletionSound);
         }
         else
         {
-            Debug.LogError("Le son de suppression ou AudioSource n'est pas configuré. Veuillez vérifier la configuration de l'AudioManager.");
+            Debug.Log("Le son de suppression ou AudioSource n'est pas configuré. Veuillez vérifier la configuration de l'AudioManager.");
         }
     }
 }
