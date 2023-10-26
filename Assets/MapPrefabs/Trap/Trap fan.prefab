@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 1584095365081967347}
   - component: {fileID: 4360704049263554315}
   - component: {fileID: 6481834818118445459}
-  - component: {fileID: 6631226621500795782}
   - component: {fileID: 501440410089255385}
+  - component: {fileID: 1400866819920752032}
   m_Layer: 6
   m_Name: Trap fan
   m_TagString: Untagged
@@ -212,28 +212,6 @@ MonoBehaviour:
   m_StartingSingleGrabTransformers: []
   m_StartingMultipleGrabTransformers: []
   m_AddDefaultGrabTransformers: 1
---- !u!64 &6631226621500795782
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8743284280472416656}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 0}
 --- !u!114 &501440410089255385
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -251,6 +229,27 @@ MonoBehaviour:
     position: {x: 0, y: 0, z: 0}
     rotation: {x: 0, y: 0, z: 0, w: 0}
     type: 0
+--- !u!65 &1400866819920752032
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8743284280472416656}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.19162928, y: 0.20700586, z: 0.14330268}
+  m_Center: {x: 0.0043933573, y: 0.09116143, z: -0.017573332}
 --- !u!1001 &1783694720587279136
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 public class PlateformeOption : MonoBehaviour
 
 
@@ -58,6 +59,11 @@ public class PlateformeOption : MonoBehaviour
         
     }
 
+    public void SpawnItem(GameObject obj)
+    {
+        Instantiate(obj, hand.position, hand.rotation, parent.transform);
+        EventSystem.current.SetSelectedGameObject(null);
+    }
     public void OnDropdownValueChanged(int index)
     {
 

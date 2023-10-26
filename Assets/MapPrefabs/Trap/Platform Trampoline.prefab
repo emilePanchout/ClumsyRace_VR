@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 8376888037659686415}
   - component: {fileID: 8834090943449515560}
   - component: {fileID: 325971387621607278}
+  - component: {fileID: 5647676873904431786}
   m_Layer: 6
   m_Name: Platform Trampoline
   m_TagString: Untagged
@@ -227,6 +228,27 @@ MonoBehaviour:
     position: {x: 0, y: 0, z: 0}
     rotation: {x: 0, y: 0, z: 0, w: 0}
     type: 0
+--- !u!65 &5647676873904431786
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9214660563114893470}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.05739648, y: 0.025983496, z: 0.034492042}
+  m_Center: {x: 0.0009906578, y: -0.0012005639, z: 0.00006176233}
 --- !u!1001 &1418953732104605411
 PrefabInstance:
   m_ObjectHideFlags: 0
