@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 public class PlateformeOption : MonoBehaviour
 
 
@@ -10,13 +11,17 @@ public class PlateformeOption : MonoBehaviour
 {
     public TMPro.TMP_Dropdown dropdownplateforme;
     public TMPro.TMP_Dropdown dropdownpiege;
+    public TMPro.TMP_Dropdown dropdowntrap;
 
     public Transform hand;
     public Transform piegeposition;
     public GameObject parent;
 
     public GameObject[] prefabsplatforme;
+  
     public GameObject[] prefabspiège;
+
+    public GameObject[] prefabTrap;
     // public Transform hand;
 
     // public GameObject[] prefabs;
@@ -26,16 +31,24 @@ public class PlateformeOption : MonoBehaviour
         List<string> optionsplateforme = new List<string>();
         foreach (GameObject prefab in prefabsplatforme)
         {
-            optionsplateforme.Add(prefab.name); // ajouter
+            optionsplateforme.Add(prefab.name); // ajouter les  prefab plateforms
         }
         dropdownplateforme.AddOptions(optionsplateforme);
 
         List<string> optionspieges = new List<string>();
         foreach (GameObject i in prefabspiège)
         {
-            optionspieges.Add(i.name); // ajouter
+            optionspieges.Add(i.name); // ajouter  les prefab checkpoints
         }
-        dropdownpiege.AddOptions(optionspieges); ;
+        dropdownpiege.AddOptions(optionspieges);
+
+
+        List<string> optionsTrap= new List<string>();
+        foreach (GameObject i in prefabTrap)
+        {
+            optionsTrap.Add(i.name); // ajouter  les prefab checkpoints
+        }
+        dropdowntrap.AddOptions(optionsTrap);
 
 
     }
@@ -46,10 +59,15 @@ public class PlateformeOption : MonoBehaviour
         
     }
 
+    public void SpawnItem(GameObject obj)
+    {
+        Instantiate(obj, hand.position, hand.rotation, parent.transform);
+        EventSystem.current.SetSelectedGameObject(null);
+    }
     public void OnDropdownValueChanged(int index)
     {
 
-        string selectedOption = dropdownplateforme.options[index].text;
+     
 
         GameObject selectedPrefab = prefabsplatforme[index];
         Instantiate(selectedPrefab, hand.position, hand.rotation,parent.transform);
@@ -60,9 +78,22 @@ public class PlateformeOption : MonoBehaviour
     public void OnDropdownValuepiege(int index)
     {
 
-        string selectedOption = dropdownpiege.options[index].text;
+      
 
         GameObject selectedPrefab = prefabspiège[index];
         Instantiate(selectedPrefab, piegeposition.position, piegeposition.rotation, parent.transform);
     }
+
+    public void OnDropdownValueTrap(int index)
+    {
+
+        
+
+        GameObject selectedPrefab = prefabTrap[index];
+        Instantiate(selectedPrefab, hand.position, hand.rotation, parent.transform);
+    }
+
+
+
+
 }
