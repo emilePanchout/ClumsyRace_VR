@@ -24,7 +24,7 @@ public class SaveManager : MonoBehaviour
         wrapper.data = objectList;
 
         dataString = JsonUtility.ToJson(wrapper);
-        System.IO.File.WriteAllText(Application.persistentDataPath + "/map.json", dataString);
+        System.IO.File.WriteAllText(System.Environment.GetFolderPath(System.Environment.SpecialFolder.Desktop) + "/map.json", dataString);
         Debug.Log("Saving objects into json");
     }
 

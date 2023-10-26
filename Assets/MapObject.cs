@@ -23,7 +23,7 @@ public class MapObject : MonoBehaviour
         }
     }
 
-    private void Start()
+    private void Update()
     {
         mapObject = new MapObjects(transform.position, transform.rotation, type);
     }
