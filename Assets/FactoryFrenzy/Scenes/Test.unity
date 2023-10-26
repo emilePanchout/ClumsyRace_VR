@@ -515,7 +515,7 @@ MonoBehaviour:
   m_SphereCastRadius: 0.1
   m_RaycastMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 8
   m_RaycastTriggerInteraction: 1
   m_RaycastSnapVolumeInteraction: 1
   m_HitClosestOnly: 0
@@ -3078,7 +3078,7 @@ GameObject:
   - component: {fileID: 451946449}
   - component: {fileID: 451946448}
   - component: {fileID: 451946447}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Plane
   m_TagString: Undeletable
   m_Icon: {fileID: 0}
@@ -7095,7 +7095,7 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 0.2
+  m_Radius: 0.02
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1412488375
 GameObject:
@@ -8402,7 +8402,7 @@ GameObject:
   - component: {fileID: 1795669073}
   - component: {fileID: 1795669072}
   - component: {fileID: 1795669076}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9666,7 +9666,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2052231788
 Transform:
   m_ObjectHideFlags: 0

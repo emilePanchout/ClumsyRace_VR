@@ -61,27 +61,29 @@ public class TeleportationManager : MonoBehaviour
         {
             teleportRay.enabled = false;
             isActive = false;
-        }
 
-        var interactable = hit.collider.GetComponentInParent<BaseTeleportationInteractable>();
-        var t = interactable.GetAttachTransform(teleportRay);
+            var interactable = hit.collider.GetComponentInParent<BaseTeleportationInteractable>();
+            var t = interactable.GetAttachTransform(teleportRay);
 
-        TeleportRequest request = new TeleportRequest()
-        {
-            destinationPosition = hit.point,
-        };
-
-        if (interactable is TeleportationAnchor)
-        {
-            request = new TeleportRequest()
+            TeleportRequest request = new TeleportRequest()
             {
-                destinationPosition = t.position,
-                destinationRotation = t.rotation,
-                matchOrientation = interactable.matchOrientation
+                destinationPosition = hit.point,
             };
+
+            if (interactable is TeleportationAnchor)
+            {
+                request = new TeleportRequest()
+                {
+                    destinationPosition = t.position,
+                    destinationRotation = t.rotation,
+                    matchOrientation = interactable.matchOrientation
+                };
+            }
+            provider.QueueTeleportRequest(request);
+            setActiveTeleport(false);
         }
-        provider.QueueTeleportRequest(request);
-        setActiveTeleport(false);
+
+        
 
     }
 
