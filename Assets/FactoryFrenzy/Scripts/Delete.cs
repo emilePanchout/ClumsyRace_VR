@@ -35,7 +35,7 @@ public class Delete : MonoBehaviour
         {
             if (!hit.collider.CompareTag("Undeletable"))
             {
-                Destroy(hit.collider.gameObject);
+                Destroy(hit.collider.gameObject.GetComponentInParent<MapObject>().gameObject);
                 if (audioManager != null)
                 {
                     audioManager.PlayDeletionSound();

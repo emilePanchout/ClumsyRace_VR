@@ -31,6 +31,7 @@ public class TeleportationManager : MonoBehaviour
     {
         teleportRay.enabled = false;
 
+
         activate.action.Enable();
         activate.action.performed += OnTeleportActivate; // thumbstick pressed
         activate.action.canceled += OnTeleportRequested; // = thumbstick released
@@ -41,6 +42,7 @@ public class TeleportationManager : MonoBehaviour
         try
         {
             lineVisual = teleportRay.GetComponent<XRInteractorLineVisual>();
+            lineVisual.enabled = false;
         }
         catch (Exception e)
         {
@@ -60,6 +62,7 @@ public class TeleportationManager : MonoBehaviour
         if (teleportRay.TryGetCurrent3DRaycastHit(out hit))
         {
             teleportRay.enabled = false;
+            lineVisual.enabled = true;
             isActive = false;
 
             var interactable = hit.collider.GetComponentInParent<BaseTeleportationInteractable>();
@@ -81,6 +84,7 @@ public class TeleportationManager : MonoBehaviour
             }
             provider.QueueTeleportRequest(request);
             setActiveTeleport(false);
+
         }
 
         
